@@ -34,7 +34,7 @@ function Message({ text, photoURL, displayName, createdAt }) {
                 <span className={cx('name')}>{displayName}</span>
                 <span className={cx('time')}>{formatDate(createdAt?.seconds)}</span>
             </div>
-            <div className={cx('text')}>{text}</div>
+            <p className={cx('text')}>{text}</p>
         </div>
     );
 }
