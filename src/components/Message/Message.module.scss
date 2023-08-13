@@ -1,0 +1,32 @@
+.messageHeader {
+    display: flex;
+    align-items: center;
+}
+.message {
+    margin: 20px 0;
+}
+.avatar {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.name {
+    margin: 0 10px 0 8px;
+    font-weight: 500;
+}
+.time {
+    font-size: 1.1rem;
+    color: rgb(167, 167, 167);
+}
+.text {
+    font-size: 1.4rem;
+    margin: 2px 0 0 33px;
+}

@@ -7,10 +7,10 @@
 
 # testing
 /coverage
-
+/.prettierrc
 # production
 /build
-
+/emulators
 # misc
 .DS_Store
 .env.local

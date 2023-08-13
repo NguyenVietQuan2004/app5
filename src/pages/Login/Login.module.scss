@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    span {
+        font-size: 3rem;
+    }
+    & > * {
+        margin-top: 10px;
+    }
+    button {
+        font-size: 2rem;
+        padding: 10px 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+    }
+    svg {
+        margin-right: 16px;
+    }
+}

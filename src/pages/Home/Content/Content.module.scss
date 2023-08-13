@@ -1,0 +1,79 @@
+.wrapper {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #874c88;
+    span {
+        font-weight: 700;
+    }
+    p {
+        font-size: 1.4rem;
+    }
+}
+.users {
+    display: flex;
+    p {
+        margin: 0 10px;
+    }
+    span {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid white;
+    }
+    span + span {
+        margin-left: -10px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.content {
+    height: calc(100% - 57.09px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.sendMessage {
+    display: flex;
+    input {
+        flex: 1;
+        outline-style: none;
+        padding-left: 12px;
+        font-size: 1.6rem;
+    }
+    button {
+        padding: 10px;
+        background-color: rgb(93, 166, 235);
+    }
+}
+.noRoom {
+    padding: 20px 30px;
+    font-size: 2rem;
+}
+.messageList {
+    overflow-y: auto;
+}
+.messageList::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+.messageList::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.06);
+}
+.messageList::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
