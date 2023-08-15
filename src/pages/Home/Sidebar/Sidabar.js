@@ -9,7 +9,7 @@ import { AppContext } from '~/Context/AppProvider';
 const cx = classNames.bind(styles);
 function Sidebar() {
     const { currentUser } = useContext(AuthContext);
-    const { setShowModalAddRoom, rooms, setCurrentRoom } = useContext(AppContext);
+    const { setShowModalAddRoom, rooms, setCurrentRoomId } = useContext(AppContext);
     const [collapsed, setCollapsed] = useState(true);
 
     const toggleCollapse = () => {
@@ -44,7 +44,7 @@ function Sidebar() {
                         <div className={cx('room')}>
                             {rooms.map((room) => {
                                 return (
-                                    <button key={room.id} onClick={() => setCurrentRoom(room)}>
+                                    <button key={room.id} onClick={() => setCurrentRoomId(room.id)}>
                                         {room.name}
                                     </button>
                                 );

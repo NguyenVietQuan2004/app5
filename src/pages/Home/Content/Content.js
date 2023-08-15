@@ -9,11 +9,10 @@ import { AuthContext } from '~/Context/AuthProvider';
 
 const cx = classNames.bind(styles);
 function Content() {
-    const { currentRoom, members, messages } = useContext(AppContext);
+    const { currentRoom, members, messages, setShowModalInviteUser } = useContext(AppContext);
     const {
         currentUser: { uid, photoURL, displayName },
     } = useContext(AuthContext);
-    console.log(messages);
     const [inputMessage, setInputMessage] = useState('');
 
     const handleSubmit = (e) => {
@@ -29,6 +28,10 @@ function Content() {
             setInputMessage('');
         }
     };
+
+    const handleShowModalInviteUser = () => {
+        setShowModalInviteUser(true);
+    };
     return (
         <div className={cx('wrapper')}>
             {Object.keys(currentRoom).length ? (
@@ -40,7 +43,7 @@ function Content() {
                         </div>
                         <div className={cx('users')}>
                             <AddUserIcon />
-                            <p>Mời</p>
+                            <button onClick={handleShowModalInviteUser}>Mời</button>
                             {members.map((member) => {
                                 return (
                                     <span key={member.uid}>

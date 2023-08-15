@@ -18,7 +18,7 @@
 }
 .users {
     display: flex;
-    p {
+    button {
         margin: 0 10px;
     }
     span {
@@ -36,6 +36,10 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+    button,
+    svg {
+        cursor: pointer;
     }
 }
 .content {

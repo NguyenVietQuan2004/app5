@@ -4,13 +4,12 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/emulators
 # testing
 /coverage
 /.prettierrc
 # production
 /build
-/emulators
 # misc
 .DS_Store
 .env.local

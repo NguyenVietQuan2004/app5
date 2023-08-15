@@ -6,7 +6,7 @@ import { addDocument } from '~/firebase/services';
 import { AuthContext } from '~/Context/AuthProvider';
 
 const cx = classNames.bind(styles);
-function Content() {
+function ModalAddRoom() {
     const { setShowModalAddRoom } = useContext(AppContext);
     const {
         currentUser: { uid },
@@ -60,4 +60,4 @@ function Content() {
     );
 }
 
-export default Content;
+export default ModalAddRoom;

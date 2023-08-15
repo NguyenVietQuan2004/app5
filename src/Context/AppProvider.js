@@ -5,7 +5,9 @@ import { AuthContext } from './AuthProvider';
 export const AppContext = createContext();
 function AppProvider({ children }) {
     const [showModalAddRoom, setShowModalAddRoom] = useState(false);
-    const [currentRoom, setCurrentRoom] = useState({});
+    const [showModalInviteUser, setShowModalInviteUser] = useState(false);
+
+    const [currentRoomId, setCurrentRoomId] = useState({});
     const {
         currentUser: { uid },
     } = useContext(AuthContext);
@@ -18,6 +20,8 @@ function AppProvider({ children }) {
         };
     }, [uid]);
     const rooms = useFirestore('rooms', roomsCondition);
+    const currentRoom = useMemo(() => rooms.find((room) => room.id === currentRoomId) || {}, [rooms, currentRoomId]);
+
     // users condition
 
     const usersCondition = useMemo(() => {
@@ -42,7 +46,18 @@ function AppProvider({ children }) {
     const messages = useFirestore('messages', condition);
     return (
         <AppContext.Provider
-            value={{ showModalAddRoom, setShowModalAddRoom, rooms, currentRoom, setCurrentRoom, members, messages }}
+            value={{
+                showModalAddRoom,
+                setShowModalAddRoom,
+                rooms,
+                currentRoomId,
+                setCurrentRoomId,
+                currentRoom,
+                members,
+                messages,
+                showModalInviteUser,
+                setShowModalInviteUser,
+            }}
         >
             {children}
         </AppContext.Provider>

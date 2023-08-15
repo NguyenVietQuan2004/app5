@@ -5,15 +5,17 @@ import Content from './Content/Content';
 import ModalAddRoom from '~/components/Modal/ModalAddRoom';
 import { useContext } from 'react';
 import { AppContext } from '~/Context/AppProvider';
+import ModalinviteUser from '~/components/Modal/ModalinviteUser';
 const cx = classNames.bind(styles);
 
 function Home() {
-    const { showModalAddRoom } = useContext(AppContext);
+    const { showModalAddRoom, showModalInviteUser } = useContext(AppContext);
     return (
         <div className={cx('wrapper')}>
             <Sidebar />
             <Content />
             {showModalAddRoom && <ModalAddRoom />}
+            {showModalInviteUser && <ModalinviteUser />}
         </div>
     );
 }
