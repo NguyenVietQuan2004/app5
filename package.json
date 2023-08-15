@@ -24,7 +24,7 @@
         "start": "react-app-rewired start",
         "test": "react-app-rewired test",
         "eject": "react-scripts eject",
-        "build": "CI= npm run build"
+        "build": "react-app-rewired build"
     },
     "eslintConfig": {
         "extends": [

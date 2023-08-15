@@ -12,7 +12,7 @@ const firebaseConfig = {
     appId: '1:505886571681:web:8ba3ebdd0e0871f1e984e0',
     measurementId: 'G-T8D42GHDWS',
 };
-// "build": "react-app-rewired build",
+
 //CI= npm run build
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
